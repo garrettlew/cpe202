@@ -130,6 +130,34 @@ class TestLab1(unittest.TestCase):
         high = 9
         self.assertEqual(bin_search(11, low, high, list_val), None )
 
+    def test_bin_search10(self):
+        ''' Target one left from center '''
+        list_val = [1, 2, 3, 4, 5, 6, 7]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(3, low, high, list_val), 2)
+
+    def test_bin_search11(self):
+        ''' Target one right from center '''
+        list_val = [8, 7, 6, 5, 4, 3, 2, 1]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(4, low, high, list_val), 4)
+
+    def test_bin_search12(self):
+        ''' Target left from center '''
+        list_val = [8, 7, 6, 9, 4, 20, 2, 1]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(7, low, high, list_val), 1)
+
+    def test_bin_search13(self):
+        ''' Target right from center '''
+        list_val = [1, 20, 3, 4, 50, 6, 7]
+        low = 0
+        high = len(list_val)-1
+        self.assertEqual(bin_search(6, low, high, list_val), 5)
+
 if __name__ == "__main__":
         unittest.main()
 
