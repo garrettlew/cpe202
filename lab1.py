@@ -4,11 +4,12 @@ def max_list_iter(int_list):  # must use iteration not recursion
     If int_list is empty, returns None. If list is None, raises ValueError"""
 
 
-    if int_list == None:
+    if int_list == None:    # if list is none
         raise ValueError
-    if len(int_list) == 0:
+    if len(int_list) == 0:    # if list is empty
         return None
-    max_value = int_list[0]   
+    max_value = int_list[0]   # Max is initially the first element
+    # Iterate through list and find max
     for i in int_list:
         if max_value < i:
             max_value = i
